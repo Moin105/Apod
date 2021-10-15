@@ -1,24 +1,17 @@
-import logo from './logo.svg';
+import React from "react";
+import {BrowserRouter , Route } from "react-router-dom";
+import Home from "./Components/Home";
+import NasaPhoto from "./Components/NasaPhoto"
 import './App.css';
 
 function App() {
   return (
+    <BrowserRouter>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Route component={Home} path="/" exact />
+      <Route component={NasaPhoto} path="/nasaphoto"/>
     </div>
+    </BrowserRouter>
   );
 }
 
